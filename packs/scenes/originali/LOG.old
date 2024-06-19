@@ -1,0 +1,5 @@
+2024/06/06-15:00:58.764257 7f87f3ffb640 Delete type=3 #1
+2024/06/06-15:00:58.770258 7f87ebfff640 Level-0 table #5: started
+2024/06/06-15:00:58.771660 7f87ebfff640 Level-0 table #5: 49033 bytes OK
+2024/06/06-15:00:58.772023 7f87ebfff640 Delete type=0 #3
+2024/06/06-15:00:58.772127 7f87ebfff640 Manual compaction at level-0 from '!scenes!1Ugf4oqbj18urTsK' @ 72057594037927935 : 1 .. '!scenes.walls!Tzm4ENjDH1Hrn3dK.zdiqEYGVBMw4sJT2' @ 0 : 0; will stop at (end)
