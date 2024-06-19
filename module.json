@@ -1,0 +1,95 @@
+{
+  "id": "wfrp4e-ua1-it",
+  "title": "WFRP4e - Avventure a Ubersreik I",
+  "description": "Ubersreik Adventures offers six scenarios for Warhammer Fantasy Roleplay set in the Duchy of Ubersreik, the setting established in the Warhammer Fantasy Starter Set. These can be used as single stand along adventures, slotted into an existing campaign, or combined to form a campaign exploring the Duchy of Ubersreik.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Heyrold",
+      "discord": "Heyrold#4406",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "wfrp4e",
+        "type": "system",
+        "manifest": "https://github.com/moo-man/WFRP4e-FoundryVTT/releases/latest/download/system.json"
+      }
+    ]
+  },
+  "scripts": [],
+  "styles": [],
+  "packs": [
+    {
+      "name": "actors",
+      "label": "PNG (Avventure a Ubersreik I)",
+      "type": "Actor",
+      "path": "packs/actors",
+      "system": "wfrp4e",
+      "banner": "./modules/wfrp4e-ua1/assets/banners/swamp-beast.webp"
+    },
+    {
+      "name": "items",
+      "label": "Articoli (Avventure a Ubersreik I)",
+      "type": "Item",
+      "path": "packs/items",
+      "system": "wfrp4e",
+      "banner": "./modules/wfrp4e-ua1/assets/banners/comet.webp"
+    },
+    {
+      "name": "journals",
+      "label": "Diario (Avventure a Ubersreik I)",
+      "type": "JournalEntry",
+      "path": "packs/journals",
+      "system": "wfrp4e",
+      "banner": "./modules/wfrp4e-ua1/assets/banners/gotheim-ruins.webp"
+    },
+    {
+      "name": "scenes",
+      "label": "Scene (Avventure a Ubersreik I)",
+      "type": "Scene",
+      "path": "packs/scenes",
+      "system": "wfrp4e",
+      "banner": "./modules/wfrp4e-ua1/assets/banners/locked-in.webp"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Ubersreik Adventures I",
+      "sorting": "m",
+      "color": "#00435c",
+      "packs": ["actors", "items", "journals", "scenes"]
+    }
+  ],
+  "flags": {
+    "initializationPacks": [
+      "wfrp4e-ua1.actors",
+      "wfrp4e-ua1.journals",
+      "wfrp4e-ua1.scenes"
+    ],
+    "folder": {
+      "name": "Ubersreik Adventures I",
+      "sorting": "m",
+      "color": "#00435c"
+    }
+  },
+  "languages": [],
+  "media": [
+    {
+      "type": "setup",
+      "url": "./modules/wfrp4e-ua1/assets/setup.webp"
+    }
+  ],
+  "minimumCoreVersion": 11,
+  "compatibleCoreVersion": 11,
+  "compatibility": {
+    "minimum": 11,
+    "verified": 11,
+    "maximum": 12
+  },
+  "url": "https://github.com/heyrold73/wfrp4e-ua1-it",
+  "manifest": "https://github.com/heyrold73/wfrp4e-ua1-it/releases/latest/download/module.json",
+  "download": "https://github.com/heyrold73/wfrp4e-ua1-it/releases/latest/download/module.zip"
+}
