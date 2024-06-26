@@ -1,0 +1,66 @@
+{
+  "_id": "FB31b80TKryHce0X",
+  "name": "Introduction",
+  "folder": "ydG6mRraijSbGIXu",
+  "sort": -200000,
+  "flags": {
+    "wfrp4e-ua1": {
+      "initialization-folder": "Ubersreik Adventures I",
+      "sort": -200000
+    }
+  },
+  "pages": [
+    {
+      "name": "Introduction",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "text": {
+        "format": 1,
+        "content": "<p>Ubersreik Adventures presents five previously released scenarios, and one all-new adventure, set in and around the @UUID[JournalEntry.70sJnVPsNmeNnqdC.JournalEntryPage.Dltz7FyeTVWKArL7]{Duchy of Ubersreik} in the Reikland. Whilst you can run each of these adventures individually, notes have been included with each on how to tie them together, as well as new adventure hooks and new details to flesh out the action.</p><p>These additions are all optional, and whilst you can use them to enhance the adventures as originally published, they should also serve as inspiration for making the adventures your own.</p><blockquote class=\"foundry-note\"><p>As these adventures are heavily involved in Ubersreik, these Journal Entries will often contain links that reference locations found in the <a style=\"color:blue\" href=\"https://foundryvtt.com/packages/wfrp4e-starter-set/\">Starter Set Module</a>, as well as <a style=\"color:blue\" href=\"https://foundryvtt.com/packages/wfrp4e-rnhd/\">Rough Nights &amp; Hard Days</a>.</p></blockquote><h3>The Ubersreik Adventures Campaign</h3><p>The adventures in this book are intended to be played individually, but can be part of a larger continuous campaign, either using this book alone or by drawing in additional adventures from <strong>Rough Nights &amp; Hard Days</strong>, or in conjunction with the <strong>Starter Set</strong> and the Adventures Book therein. </p><p>Ultimately, The Guilty Party is intended to lead the Characters into <strong>The Enemy Within</strong>, and should either play the final part of the Ubersreik Adventures campaign, or the campaign style chosen should link further into The Enemy Within. Below are three potential ways of linking everything together.</p><h4>A Free and Prosperous Ubersreik!</h4><p>Almost every adventure has an alternate hook that involves a ‘concerned group of merchants’ in the city. Perhaps this coalition is the beginnings of a rival @UUID[JournalEntry.TSyoR9nSk7cehypG.JournalEntryPage.FIx69aLJxrJczytP]{Merchant's Guild}, or a rising political bloc who wish to see Ubersreik become a Freisburg. An entire campaign could be built around this rise to political power, with the Characters as either pawns of a bourgeoisie uprising or members and eventual leaders of the cause.</p><p>If Ubersreik does become a Freisburg, this could have dramatic consequences for the later stages of <strong>The Enemy Within</strong>, and the brewing instability in the Empire. More so if the Characters are known agents, or beneficiaries, of such a rebellion.</p><h4>The Beasts of Old</h4><p>Several adventures are either specifically tied to, or easily linked to, monstrous forces in and around the Duchy. The Basilisk in If Looks Could Kill, the Jabberslythe in The Mad Men of Gothheim, and the Vampire in Slaughter in Spittlefeld, could all be components of a larger problem. Perhaps a nefarious cult is rousing ancient evils across the Duchy? Alternatively, each of these monsters could present a component in a dark ritual of unknown purpose, and a drop of blood from each will grant terrible power to those with the knowledge. </p><p>You can easily twist the other adventures to include these themes: the hedge witch @UUID[Actor.sDo8xTHz9U3zop80]{Alex Grün} from @UUID[JournalEntry.QqbRrRKeBiZewGip]{Bait and Witch} may hold vital knowledge; Elicha Hochs from The Guilty Party may be trying to purchase the @UUID[JournalEntry.TSyoR9nSk7cehypG.JournalEntryPage.alatSQnvNobt63Gr]{Bridge House} to access a secret altar in its basement; and perhaps the only person who was previously standing in the way of this dark conspiracy was, in fact, Corporal Tylo Veilfrass from Heart of Glass! And who knows how this dark conspiracy might factor into the machinations of its true puppet masters: the Purple Hand!</p><h4>Roaches in the Woodwork</h4><p>@UUID[Actor.emW6Xa9Bx75AEXp9]{The Cabal} is an obvious source of conspiracy in Ubersreik, but works far more subtly than most other organisations. As such, the somewhat disconnected nature of the adventures presented here works in your favour! Use Bait and Witch or Heart of Glass  as palate cleansers between the Cabal-driven adventures, to make it seem like the situation is less focused on their nefarious plans. This campaign hook may also work well when tied to <strong>Rough Nights &amp; Hard Days</strong> or <strong>The Enemy Within</strong>, with the Cabal being placed as puppet masters of the various cults found within both of those campaigns.</p><blockquote class=\"sidebar\"><h3 class=\"sidebar-title no-toc\" style=\"text-align:center;text-transform:uppercase\"><em>The Most Respectable Association of Ubersreik</em></h3><div class=\"journal-image float-right\"><img src=\"modules/wfrp4e-ua1/assets/misc/ubersreik-duchy.webp\" width=\"171\" height=\"176\" /></div><p><em>Though unfortunately named, the Most Respectable Association of Ubersreik — or simply ‘The Association’ — is one of the town’s worst kept secrets. On the surface, it is a bogeyman of sorts, name-dropped in trade deals by folk who haven’t the faintest clue who its members are, but wanting to leverage the appearance of political unity for their own means. Under the surface, however, the group is a shadow organisation with a mind towards political liberation in Ubersreik, and the establishment of the Freisburg.</em></p><p><em>The Association is an unofficial group of ‘concerned merchants’, politicians, lobbyists, and elites, who all have a vested interest in the rapid change of Ubersreik into a chartered town, freed from the clutches of the aristocracy. Headed by Sir Franz Stricholz, a former ally and attendant of the von Jungfreud line, and composed of  a mere handful of powerful members, the Association has been working tirelessly for months to bring about this shift.</em></p></blockquote>",
+        "markdown": ""
+      },
+      "_id": "24YE2ez9stpvwh8L",
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!journal.pages!FB31b80TKryHce0X.24YE2ez9stpvwh8L"
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "O2wGx3K2xdLRf1Hx": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "p6OsUjigSLS2Fduz": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676513767468,
+    "modifiedTime": 1693273574410,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!journal!FB31b80TKryHce0X"
+}
