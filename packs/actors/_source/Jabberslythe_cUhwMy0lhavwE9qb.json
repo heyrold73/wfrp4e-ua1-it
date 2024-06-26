@@ -1,0 +1,2430 @@
+{
+  "_id": "cUhwMy0lhavwE9qb",
+  "name": "Jabberslythe",
+  "type": "creature",
+  "img": "modules/wfrp4e-ua1/assets/actors/jabberslythe.webp",
+  "items": [
+    {
+      "name": "Bestiale",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.AGcJl5rHjkyIQBPP"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Queste creature sono prive di parola o capacità di pensiero razionale. Hanno paura del fuoco e subiscono 1 @Condition[Atterrito] se ne vengono colpite. Si difendono usando solo <em>Schivare</em>. Se perdono più di metà delle proprie Ferite fuggono, a meno che non stiano proteggendo i propri cuccioli, vengano messe all’angolo o abbiano il Tratto <em>Territoriale</em>. In questi casi entrano in <em>Furia</em> (vedere pag. 190). Sono prive di punteggio Socialità.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878974,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 1600000,
+      "_id": "AGcJl5rHjkyIQBPP",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.AGcJl5rHjkyIQBPP"
+    },
+    {
+      "name": "Aura di Follia",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "PHtCqlMVAObWnour",
+          "flags": {
+            "wfrp4e": {
+              "effectApplication": "apply",
+              "effectTrigger": "oneTime",
+              "script": "args.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {absolute : {difficulty : \"average\"}, context : {failure : \"Suffer Creeping Irrationality\"}}).then(setupData => {\n    args.actor.basicTest(setupData).then(test => {\n        if (test.result.outcome == \"failure\")\n        {\n            msg = `Creeping Irratitonality Roll: ${(await new Roll(\"1d10\").roll()).total}`\n            if (test.result.outcome.roll % 11 == 0 || test.result.outcome.roll == 100)\n            {\n                msg += `<br><b>${args.actor.prototypeToken.name}</b> also gains 1 Corruption Point. If mutating, this results in a @Table[mutatemental]{Mental Corruption}`\n                let newCorruption = Number(args.actor.status.corruption.value) + 1\n                args.actor.update({\"system.status.corruption.value\" : newCorruption})\n                args.actor.checkCorruption()\n            }\n\n            ChatMessage.create({content : msg, speaker : {alias : this.effect.name}})\n        }\n        \n    })\n})",
+              "preventDuplicateEffects": false,
+              "applicationData": {
+                "type": "aura",
+                "documentType": "Actor",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "testIndependent": false,
+                "equipTransfer": false,
+                "prompt": false,
+                "targetedAura": false,
+                "keep": false,
+                "radius": "20"
+              },
+              "scriptData": [
+                {
+                  "label": "Aura di Follia",
+                  "trigger": "endRound",
+                  "script": "[Script.lhemR8EP5tGNKout]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Aura di Follia",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.vqPgfuCRFtBcvfGO.PHtCqlMVAObWnour"
+        }
+      ],
+      "folder": "EJ6nOxJpcXQZBSqu",
+      "sort": 0,
+      "flags": {
+        "wfrp4e-ua1": {
+          "initialization-folder": "Ubersreik Adventures I"
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.vqPgfuCRFtBcvfGO"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>All‘inizio di ogni round, ogni Personaggio entro 20 metri dalla creatura deve effettuare una <strong>Prova Media (+20) di Freddezza</strong>. Se fallisce, lancia 1d10 sulla Tabella Perdita della Ragione. Un fallimento critico aggiunge, inoltre, +1 Punti Corruzione. Se supera il suo limite di Corruzione, il Personaggio tira sulla tabella di Corruzione Mentale (pag. 185 WFRP). Se persistenti, tutti gli effetti di Aura di Follia sono cumulativi.</p>\n<p>&nbsp;</p>\n<table style=\"width: 99.1329%; height: 128px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 16px;\">\n<td style=\"text-align: center; width: 9.09487%; height: 16px;\"><strong>1d10</strong></td>\n<td style=\"text-align: center; width: 90.1763%; height: 16px;\"><strong>Perdita della Ragione</strong></td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 9.09487%; height: 16px; text-align: center;\">1-2</td>\n<td style=\"width: 90.1763%; height: 16px;\"><strong>Attenzione:</strong> nel prossimo turno puoi effettuare un Movimento o un‘Azione, ma non entrambi. Poi l’effetto termina.</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 9.09487%; height: 16px; text-align: center;\">3-4</td>\n<td style=\"width: 90.1763%; height: 16px;\"><strong>Che succede? </strong>Subisci la Condizione @Condition[Sorpreso].</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 9.09487%; height: 16px; text-align: center;\">5-6</td>\n<td style=\"width: 90.1763%; height: 16px;\"><strong>Il mio piano funziona!</strong> Devi compiere le stesse azioni che hai effettuato il Turno precedente. Se per qualche motivo non puoi, devi fare il possibile per prepararti a compierle nel tuo prossimo Turno. <strong>Durata</strong>: 1d10 Round.</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 9.09487%; height: 16px; text-align: center;\">7</td>\n<td style=\"width: 90.1763%; height: 16px;\"><strong>Chi ha detto che ero paranoico?</strong> Diventi soggetto ad Animosità verso un PG casuale. <strong>Durata</strong>: Persistente.</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 9.09487%; height: 16px; text-align: center;\">8</td>\n<td style=\"width: 90.1763%; height: 16px;\"><strong>Stai parlando con me?</strong> Diventi soggetto a Odio verso un PG casuale. <strong>Durata</strong>: Persistente.</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 9.09487%; height: 16px; text-align: center;\">9</td>\n<td style=\"width: 90.1763%; height: 16px;\"><strong>Muori! Muori! Muori!</strong> Diventi soggetto a Furia. <strong>Durata</strong>: Persistente.</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 9.09487%; height: 16px; text-align: center;\">10</td>\n<td style=\"width: 90.1763%; height: 16px;\"><strong>Tic Nervoso:</strong> Subisci una @UUID[Compendium.wfrp4e-it-translation-system7xx.tables.5HKnpyOk4XDPdZ7V]{Corruzione Mentale}. <strong>Durata</strong>: Persistente.</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<p><strong>Persistente</strong>: queste conseguenze hanno una durata di [[/r 1d10]] ore - Bonus Volontà (fino a un minimo di 1 ora). Dopodiché, si esegue una <strong>Prova Media (+20) di Freddezza</strong>. Se fallita, l‘effetto permane. La difficoltà della Prova può variare a discrezione del GM se il Personaggio ha un’esposizione limitata o prolungata. Un Giocatore può spendere un Punto Resilienza per evitare gli effetti a lungo termine dell‘Aura di Follia, anche se i ricordi dell‘orrenda creatura non sbiadiranno mai. Oppure può spendere un Punto Risolutezza per ignorare le conseguenze negative dell‘Aura di Follia per 1 round.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "ownership": {
+        "default": 0,
+        "O2wGx3K2xdLRf1Hx": 3,
+        "p6OsUjigSLS2Fduz": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1676513767626,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "vqPgfuCRFtBcvfGO",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.vqPgfuCRFtBcvfGO"
+    },
+    {
+      "name": "Balzo",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "1XRT8BzRtNWArfau",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "equipTransfer": false
+              },
+              "scriptData": [
+                {
+                  "label": "Balzo",
+                  "trigger": "prepareData",
+                  "script": "[Script.4JVIy5xtVwvadoqv]"
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Balzo",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.j6v78dnOOdCB6c3d.1XRT8BzRtNWArfau"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.j6v78dnOOdCB6c3d"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Queste creature possono balzare molto in alto, grazie a gambe possenti, magia o piccole ali. Quando Caricano o Corrono, raddoppiano il proprio Movimento e ignorano terreno e  Personaggi, dato che li superano di slancio.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878979,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 6000000,
+      "_id": "j6v78dnOOdCB6c3d",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.j6v78dnOOdCB6c3d"
+    },
+    {
+      "name": "Sangue Corrosivo",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "mzNcVAruDOTiCGhS",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "equipTransfer": false,
+                "avoidTest": {
+                  "value": "none"
+                },
+                "prompt": false
+              },
+              "scriptData": [
+                {
+                  "label": "Sangue Corrosivo",
+                  "trigger": "takeDamage",
+                  "script": "[Script.QwHoqu2oO8QO8Mad]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Sangue Corrosivo",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.M5QSWOYt2Rbv2yxW.mzNcVAruDOTiCGhS"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.M5QSWOYt2Rbv2yxW"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Il sangue di questa creatura è corrosivo. Ogni volta che viene Ferita, tutti gli avversari Ingaggiati vengono colpiti dagli schizzi e subiscono [[/r 1d10]] Ferite (modificate dal Bonus Resistenza e dai Punti Armatura, minimo 1).</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": false,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878976,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 3800000,
+      "_id": "M5QSWOYt2Rbv2yxW",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.M5QSWOYt2Rbv2yxW"
+    },
+    {
+      "name": "Distraente",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "et9TgrjWHZYQI7OJ",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "aura",
+                "documentType": "Actor",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "equipTransfer": false,
+                "prompt": false,
+                "targetedAura": false,
+                "keep": false,
+                "radius": "@actor.system.characteristics.t.bonus"
+              },
+              "scriptData": [
+                {
+                  "label": "Distraente",
+                  "trigger": "dialog",
+                  "script": "[Script.Uvk1X7sEhvv77YkD]",
+                  "options": {
+                    "dialog": {
+                      "activateScript": "[Script.AZGXrZOQ4EzjxRL9]",
+                      "hideScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Distraente",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.MVI0lXcg6vvtooAF.et9TgrjWHZYQI7OJ"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.MVI0lXcg6vvtooAF"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Questa creatura distrae o confonde i nemici grazie a un muschio soporifero, un tanfo nauseante o un aspetto bizzarro e orrendo. Tutti gli esseri viventi entro un numero di metri pari al suo Bonus Resistenza subiscono -20 a tutte le Prove. Questa penalità non è cumulativa se sono presenti più creature con questo Tratto.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.1.5",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878976,
+        "modifiedTime": 1716241204222,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 3900000,
+      "_id": "MVI0lXcg6vvtooAF",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.MVI0lXcg6vvtooAF"
+    },
+    {
+      "name": "Infetto",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "6rMAx2bGefOkubv8",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "equipTransfer": false,
+                "avoidTest": {
+                  "value": "none"
+                },
+                "prompt": false
+              },
+              "scriptData": [
+                {
+                  "label": "Infetto",
+                  "trigger": "applyDamage",
+                  "script": "[Script.LQEWSN5KnHHATPsf]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Infetto",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.V0c3qBU1CMm8bmsW.6rMAx2bGefOkubv8"
+        }
+      ],
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.V0c3qBU1CMm8bmsW"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>La creatura, o le sue armi, sono vettori di una brutta infezione. Se causa Ferite a un essere vivente, questi dovrà superare una <strong>Prova Facile (+40) di Tempra</strong> per non contrarre una @UUID[Compendium.wfrp4e-it-translation-system7xx.items.kKccDTGzWzSXCBOb]{Ferita Infetta}</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878978,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 5000000,
+      "_id": "V0c3qBU1CMm8bmsW",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.V0c3qBU1CMm8bmsW"
+    },
+    {
+      "name": "Vista Notturna",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.FmHDbCOy3pH8yKhm"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>La creatura ha il Talento <em>Vista Notturna</em> (vedere pag. 147).</p>\n<p>Il Personaggio vede bene al buio. Se c’è almeno un po’ di luce (come quella delle stelle, della luna o muschi fosforescenti) può vedere chiaramente fino a 20m per grado di questo Talento. Inoltre l’efficacia di ogni fonte di luce è aumentata della medesima distanza.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878975,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 2700000,
+      "_id": "FmHDbCOy3pH8yKhm",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.FmHDbCOy3pH8yKhm"
+    },
+    {
+      "name": "Livido alle Costole",
+      "type": "critical",
+      "img": "modules/wfrp4e-core/icons/injuries/broken-body.png",
+      "effects": [
+        {
+          "_id": "vIjf5xtB3kGSjrwR",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "equipTransfer": false,
+                "avoidTest": {
+                  "value": "none"
+                },
+                "prompt": false
+              },
+              "scriptData": [
+                {
+                  "label": "Livido alle Costole",
+                  "trigger": "dialog",
+                  "script": "[Script.xvGxwv7X0Vq3vNqb]",
+                  "options": {
+                    "dialog": {
+                      "activateScript": "[Script.JFgXyb6bKjZJLmF8]",
+                      "hideScript": "[Script.oW1gtYVT5nrxDjM7]",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Livido alle Costole",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.m469xQtEiHg49rVE.vIjf5xtB3kGSjrwR"
+        }
+      ],
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.m469xQtEiHg49rVE"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Penalità di -10 in tutte le Prove basate su Agilità per [[/r 1d10]] giorni.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "wounds": {
+          "value": "2",
+          "type": "String",
+          "label": "Wounds"
+        },
+        "modifier": {
+          "value": "",
+          "type": "String",
+          "label": "Test Modifier"
+        },
+        "location": {
+          "value": "Torso",
+          "type": "String",
+          "label": "Location"
+        },
+        "prompt": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652854430,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "m469xQtEiHg49rVE",
+      "folder": "MYUZYH6v4bUMmjZV",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 1200000,
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.m469xQtEiHg49rVE"
+    },
+    {
+      "name": "Taglia",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "name": "Taglia",
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "_id": "JMSrxnNcqyguP1pz",
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "origin": null,
+          "transfer": true,
+          "statuses": [],
+          "flags": {
+            "wfrp4e": {
+              "scriptData": [
+                {
+                  "label": "Taglia",
+                  "trigger": "immediate",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  },
+                  "script": "[Script.PmELrzD3RmF9qKkO]"
+                }
+              ],
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "testIndependent": false,
+                "equipTransfer": false,
+                "prompt": false
+              }
+            }
+          },
+          "tint": null,
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.8slW8CJ2oVTxeQ6q.JMSrxnNcqyguP1pz"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.8slW8CJ2oVTxeQ6q"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"> Questo Tratto rappresenta esseri di dimensioni molto diverse da quelle di un comune essere umano. Esistono sette gradi di Taglia, da Minuscola a Mostruosa.</p>\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">&nbsp;</p>\n<div style=\"direction: ltr;\">\n<table style=\"direction: ltr; border-color: #a3a3a3; border-width: 1pt;\" title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">Taglia</span></p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">&nbsp;Esempi</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Minuscola</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Farfalla, Topo, Piccione</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Minuta</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Gatto, Falco, Neonato Umano</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Piccola</p>\n</td>\n<td style=\"vertical-align: top; width: 2.1513in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Ratto Gigante, Halﬂing, Bambino Umano</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Media</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Elfo, Nano, Umano</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Grande</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Cavallo, Ogri, Troll</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8875in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Enorme</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0625in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Grifone, Viverna, Manticora</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8875in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Mostruosa</p>\n</td>\n<td style=\"vertical-align: top; width: 2.1319in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Drago, Gigante, Principe Demone</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>&nbsp;</p>\n<h3>Usare la Taglia</h3>\n<p>&nbsp;</p>\n<p> Se si desidera usare la Taglia per ingrandire una creatura – per esempio trasformando un Ragno Gigante in uno Titanico – per ogni aumento si somma +10 a Forza e Resistenza e si sottrae -5 ad Agilità. In caso la si rimpicciolisca si fa il contrario. &nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<h3>Modificatori al Combattimento</h3>\n<p>Se più grande:</p>\n<ul type=\"disc\">\n<li> Se la creatura è di 1 Taglia più grande le sue armi ottengono la Qualità <em>Dannosa</em>, se di 2 <em>Impatto</em>.</li>\n<li> Il danno che infligge viene moltiplicato per la differenza di taglia (per esempio 2 gradi = Danno ×2) dopo aver applicato ogni possibile modificatore.</li>\n<li> Il danno che infligge viene moltiplicato per la differenza di taglia (per esempio 2 gradi = Danno ×2) dopo aver applicato ogni possibile modificatore. </li>\n</ul>\n<p>&nbsp;</p>\n<p>Se più piccola:</p>\n<p>• La creatura ottiene +10 per colpire.</p>\n<p>&nbsp;</p>\n<h3> Difendersi contro Creature più Grandi </h3>\n<p> Per ogni Taglia di differenza il difensore subisce -2 LS alle Prove Contrapposte di Mischia per difendersi. È meglio schivare un albero manovrato da un gigante, che pararlo.</p>\n<p>&nbsp;</p>\n<h3>Attacco a Distanza</h3>\n<p> Ottieni un grosso bonus quando spari a bersagli più grandi, ma per ogni +10 che ricevi, sottrai 1 dal tuo danno. (Es. +40 per colpire un bersaglio Enorme, -4 danni).</p>\n<p>&nbsp;</p>\n<h3>Paura e Terrore</h3>\n<p> Una creatura con fare aggressivo provoca <em>Paura</em> in tutte quelle più piccole e <em>Terrore</em> se ci sono almeno 2 gradi di differenza. Il grado di <em>Paura</em> o <em>Terrore</em> è pari alla differenza di Taglia (per esempio, un mostro Grande causerà <em>Terrore</em> 2 nelle creature Piccole, vedere pag. 190).</p>\n<p>&nbsp;</p>\n<h3>Manovrare in Combattimento </h3>\n<p> Una creatura più grande può lasciare un combattimento senza Disimpegnarsi, le basta spintonare gli avversari. </p>\n<p>&nbsp;</p>\n<h3>Prove di Forza</h3>\n<p> Una creatura vince automaticamente le <strong>Prove Contrapposte di Forza</strong> (e altre simili) se è almeno di 2 Taglie più grande dell’avversario. Se la differenza è di 1 Taglia, l’avversario potrà vincere solo ottenendo un Critico, che porterà a confrontare i LS come di norma.</p>\n<p>&nbsp;</p>\n<h3>Calpestare</h3>\n<p> Una creatura più grande dei propri avversari può spendere 1 Vantaggio per Calpestarli come Attacco Gratuito, usando Mischia (Rissa). Il Danno è pari al suo Bonus Forza +0.</p>\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">&nbsp;</p>\n<div style=\"direction: ltr;\">\n<table style=\"direction: ltr; border-collapse: collapse; border: 1pt solid #A3A3A3;\" title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">Taglia </span></p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">Ferite</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Minuscola</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">1</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Minuta</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Bonus Resistenza </p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Piccola</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">(Bonus Resistenzax2) + Bonus Volontà</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Media</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"> Bonus Forza+(Bonus Resistenza×2)+Bonus Volontà</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Grande</p>\n</td>\n<td style=\"vertical-align: top; width: 4.0in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"> 2×[Bonus Forza+(Bonus Resistenza×2)+Bonus Volontà]</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8666in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Enorme</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9812in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"> 4×[Bonus Forza+(Bonus Resistenza×2)+Bonus Volontà]</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8666in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Mostruosa</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9812in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"> 8×[Bonus Forza+(Bonus Resistenza×2)+Bonus Volontà]</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "Enorme",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878973,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 1200000,
+      "_id": "8slW8CJ2oVTxeQ6q",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.8slW8CJ2oVTxeQ6q"
+    },
+    {
+      "name": "Veleno",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "cwsT8KWhr0OgtWc1",
+          "flags": {
+            "wfrp4e": {
+              "hide": false,
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "equipTransfer": false
+              },
+              "scriptData": [
+                {
+                  "label": "Veleno",
+                  "trigger": "applyDamage",
+                  "script": "[Script.jfk5VDKMTIf4ee0v]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Veleno",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.gFkRm9wS65qe18Xv.cwsT8KWhr0OgtWc1"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.gFkRm9wS65qe18Xv"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Gli attacchi di questa creatura sono velenosi. Se infligge Ferite causa 1 @Condition[Avvelenato]. Se non è indicata una Difficoltà specifica si presume che sia Impegnativa (vedere pag. 168).</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878979,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 5900000,
+      "_id": "gFkRm9wS65qe18Xv",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.gFkRm9wS65qe18Xv"
+    },
+    {
+      "name": "Corona d'Oro",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/goldcrown.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.Ggx0bRaCuq8MbF0g"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 240
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495181,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "Ggx0bRaCuq8MbF0g",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.Ggx0bRaCuq8MbF0g"
+    },
+    {
+      "name": "Scellino d'Argento",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/silvershilling.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.KB8HgDz56dh2w7w1"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 12
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495184,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "KB8HgDz56dh2w7w1",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.KB8HgDz56dh2w7w1"
+    },
+    {
+      "name": "Penny d'Ottone",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/brasspenny.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.0MYOJFx3vkYA95B4"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 1
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495169,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "0MYOJFx3vkYA95B4",
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.0MYOJFx3vkYA95B4"
+    },
+    {
+      "name": "Corazzato",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "CAcGBn8sq62mVUxJ",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "equipTransfer": false,
+                "avoidTest": {
+                  "value": "none"
+                },
+                "prompt": false,
+                "testIndependent": false
+              },
+              "scriptData": [
+                {
+                  "label": "Corazzato",
+                  "trigger": "APCalc",
+                  "script": "[Script.Vb7rgl8T4VRswbnZ]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Corazzato",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.8rr5eYf1kVf3elnC.CAcGBn8sq62mVUxJ"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.8rr5eYf1kVf3elnC"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>La creatura indossa un’armatura o ha la pelle molto coriacea. Ottiene Punti Armatura pari al Grado in tutte le Locazioni.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "3",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878978,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "8rr5eYf1kVf3elnC",
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 5300000,
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.8rr5eYf1kVf3elnC"
+    },
+    {
+      "name": "Morso",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "name": "Morso",
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "_id": "JqX5XmH4ZXiST9ML",
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "origin": null,
+          "transfer": true,
+          "statuses": [],
+          "flags": {
+            "wfrp4e": {
+              "scriptData": [
+                {
+                  "label": "Morso (Attacco Gratuito)",
+                  "trigger": "manual",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  },
+                  "script": "[Script.n5RJqJL9fdRIxkuN]"
+                }
+              ],
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "equipTransfer": false,
+                "prompt": false
+              }
+            }
+          },
+          "tint": null,
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.SOV8hwMtOr3psrdY.JqX5XmH4ZXiST9ML"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.SOV8hwMtOr3psrdY"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Durante il proprio Turno, la creatura può spendere 1 Vantaggio per effettuare un Attacco Gratuito. Il Danno inflitto è pari al Grado e <em>include già il Bonus Forza</em>.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": true,
+          "damage": true,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "ws",
+          "bonusCharacteristic": "s",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "4",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878979,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "SOV8hwMtOr3psrdY",
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 6600000,
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.SOV8hwMtOr3psrdY"
+    },
+    {
+      "name": "Arma",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.kgFFYL25hj5pzCfA"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>La creatura porta un’arma da mischia o possiede zanne e artigli.\n                \n                L’arma causa Danno pari al Grado, che<em> include già il Bonus Forza</em>. Di solito il danno è pari a Bonus Forza +4, che rappresenta un’Arma a Una Mano.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": true,
+          "damage": true,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "ws",
+          "bonusCharacteristic": "s",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "4",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878974,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "kgFFYL25hj5pzCfA",
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 1800000,
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.kgFFYL25hj5pzCfA"
+    },
+    {
+      "name": "Lingua Prensile (12)",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "kPgI28vmSamM3u1s",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Item",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "equipTransfer": false,
+                "prompt": false,
+                "testIndependent": false
+              },
+              "scriptData": [
+                {
+                  "label": "Lingua Prensile (Gittata)",
+                  "trigger": "applyDamage",
+                  "script": "[Script.Mir4FMHQRdVqazAF]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                },
+                {
+                  "label": "Lingua (Attacco Gratuito)",
+                  "string": "",
+                  "trigger": "manual",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  },
+                  "script": "[Script.n5RJqJL9fdRIxkuN]"
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Lingua Prensile (Gittata)",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.R1byYM5OV2JI4WJi.kPgI28vmSamM3u1s"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.R1byYM5OV2JI4WJi"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>La creatura ha una lingua prensile con cui può trascinare le proprie vittime verso una misera fine. Nel proprio Turno può spendere 1 Vantaggio per effettuare un Attacco Gratuito a distanza con la lingua. Il Danno inflitto è pari al Grado e <em>include già il Bonus Forza</em>. Chi viene colpito subisce 1 <em>Afferrato</em> e, se di Taglia inferiore, viene trascinato verso la creatura e Ingaggiato in mischia. Il mostro può decidere di rilasciare il bersaglio, effettuando un Attacco Gratuito con la propria <em>Arma</em> nel processo, o iniziare una Lotta (vedere pag. 163).</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": true,
+          "damage": true,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "bs",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "ranged"
+        },
+        "specification": {
+          "value": "5",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878981,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "R1byYM5OV2JI4WJi",
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 7700000,
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.R1byYM5OV2JI4WJi"
+    },
+    {
+      "name": "Coda",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "3KXZhIkHukLOpg2l",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Item",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "equipTransfer": false,
+                "prompt": false
+              },
+              "scriptData": [
+                {
+                  "label": "Coda",
+                  "trigger": "applyDamage",
+                  "script": "[Script.Mhb67xufvA9uWO21]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                },
+                {
+                  "label": "Coda (Attacco Gratuito)",
+                  "string": "",
+                  "trigger": "manual",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  },
+                  "script": "[Script.n5RJqJL9fdRIxkuN]"
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Coda",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!cUhwMy0lhavwE9qb.cZMneS8QTTH6y0Oh.3KXZhIkHukLOpg2l"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.cUhwMy0lhavwE9qb.Item.cZMneS8QTTH6y0Oh"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>La creatura può usare la coda per far cadere i nemici. \n                \n                Nel proprio Turno, spendendo 1 Vantaggio, può effettuare un Attacco Gratuito con la Coda. Il Danno inflitto è pari al Grado e <em>include già il Bonus Forza</em>. Gli avversari di <em>Taglia</em> inferiore che subiscono Ferite cadono <em>Proni</em>.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": true,
+          "damage": true,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "ws",
+          "bonusCharacteristic": "s",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "3",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878977,
+        "modifiedTime": 1713591968444,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "cZMneS8QTTH6y0Oh",
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 4800000,
+      "_key": "!actors.items!cUhwMy0lhavwE9qb.cZMneS8QTTH6y0Oh"
+    }
+  ],
+  "effects": [
+    {
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "statuses": ["bleeding"],
+      "name": "Sanguinante",
+      "flags": {
+        "wfrp4e": {
+          "value": 4,
+          "applicationData": {
+            "conditionTrigger": "endRound"
+          },
+          "scriptData": [
+            {
+              "trigger": "manual",
+              "label": "@effect.name",
+              "script": "[Script.MMv2B8TH7jxNCtdl]"
+            }
+          ]
+        }
+      },
+      "_id": "u9b2xQWZMDvjmaZx",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": false,
+      "_key": "!actors.effects!cUhwMy0lhavwE9qb.u9b2xQWZMDvjmaZx"
+    },
+    {
+      "icon": "systems/wfrp4e/icons/conditions/fatigued.png",
+      "statuses": ["fatigued"],
+      "name": "Affaticato",
+      "flags": {
+        "wfrp4e": {
+          "value": 3,
+          "applicationData": {},
+          "scriptData": [
+            {
+              "trigger": "dialog",
+              "label": "Penalità a tutti i Test (@effect.name)",
+              "script": "[Script.XPxAKqPpPYE4E6B5]",
+              "options": {
+                "dialog": {
+                  "activateScript": "[Script.sQDh3g11pWchxpW9]"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "yR7XGpdwvyfk0rUC",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": false,
+      "_key": "!actors.effects!cUhwMy0lhavwE9qb.yR7XGpdwvyfk0rUC"
+    },
+    {
+      "icon": "systems/wfrp4e/icons/conditions/blinded.png",
+      "statuses": ["blinded"],
+      "name": "Accecato",
+      "flags": {
+        "wfrp4e": {
+          "value": 3,
+          "applicationData": {},
+          "scriptData": [
+            {
+              "trigger": "dialog",
+              "label": "Test relativi alla Vista",
+              "script": "[Script.XPxAKqPpPYE4E6B5]",
+              "options": {
+                "dialog": {
+                  "activateScript": "[Script.dkY7WRYjFVh8GB0m]"
+                }
+              }
+            },
+            {
+              "trigger": "dialog",
+              "label": "Bonus agli attacchi in Mischia",
+              "script": "[Script.B87v1twc65qyvUWi]",
+              "options": {
+                "dialog": {
+                  "targeter": true,
+                  "hideScript": "[Script.f6WnrJvoNkfoNN9Y]",
+                  "activateScript": "[Script.ByhEa1BxQOyrOmqg]"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "t6SRtKbtdwZ83tmf",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": false,
+      "_key": "!actors.effects!cUhwMy0lhavwE9qb.t6SRtKbtdwZ83tmf"
+    },
+    {
+      "icon": "systems/wfrp4e/icons/conditions/blinded.png",
+      "statuses": ["blinded"],
+      "name": "Accecato",
+      "flags": {
+        "wfrp4e": {
+          "value": 1,
+          "applicationData": {},
+          "scriptData": [
+            {
+              "trigger": "dialog",
+              "label": "Test relativi alla Vista",
+              "script": "[Script.XPxAKqPpPYE4E6B5]",
+              "options": {
+                "dialog": {
+                  "activateScript": "[Script.dkY7WRYjFVh8GB0m]"
+                }
+              }
+            },
+            {
+              "trigger": "dialog",
+              "label": "Bonus agli attacchi in Mischia",
+              "script": "[Script.B87v1twc65qyvUWi]",
+              "options": {
+                "dialog": {
+                  "targeter": true,
+                  "hideScript": "[Script.f6WnrJvoNkfoNN9Y]",
+                  "activateScript": "[Script.ByhEa1BxQOyrOmqg]"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "_id": "KvHsoiv8hPM4qeup",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "transfer": false,
+      "_key": "!actors.effects!cUhwMy0lhavwE9qb.KvHsoiv8hPM4qeup"
+    }
+  ],
+  "folder": "cBIyD0Ey6pdAYwxY",
+  "sort": 100001,
+  "flags": {
+    "autoCalcRun": true,
+    "autoCalcWalk": true,
+    "autoCalcWounds": true,
+    "autoCalcCritW": true,
+    "autoCalcCorruption": true,
+    "autoCalcEnc": true,
+    "autoCalcSize": true,
+    "wfrp4e-ua1": {
+      "initialization-folder": "The Mad Men of Gotheim",
+      "sort": 100001
+    },
+    "meleeDamageIncrease": 0,
+    "rangedDamageIncrease": 0,
+    "robust": 0,
+    "resolute": 0,
+    "ambi": 0,
+    "eqpPoints": 0,
+    "defensive": 0,
+    "talentTests": []
+  },
+  "system": {
+    "characteristics": {
+      "ws": {
+        "type": "number",
+        "label": "CHAR.WS",
+        "abrev": "CHARAbbrev.WS",
+        "initial": 45,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 45,
+        "bonus": 4,
+        "cost": 25
+      },
+      "bs": {
+        "type": "Number",
+        "label": "CHAR.BS",
+        "abrev": "CHARAbbrev.BS",
+        "initial": 40,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 40,
+        "bonus": 4,
+        "cost": 25
+      },
+      "s": {
+        "type": "Number",
+        "label": "CHAR.S",
+        "abrev": "CHARAbbrev.S",
+        "initial": 55,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 55,
+        "bonus": 5,
+        "cost": 25
+      },
+      "t": {
+        "type": "Number",
+        "label": "CHAR.T",
+        "abrev": "CHARAbbrev.T",
+        "initial": 50,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 50,
+        "bonus": 5,
+        "cost": 25
+      },
+      "i": {
+        "type": "Number",
+        "label": "CHAR.I",
+        "abrev": "CHARAbbrev.I",
+        "initial": 20,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 20,
+        "bonus": 2,
+        "cost": 25
+      },
+      "ag": {
+        "type": "Number",
+        "label": "CHAR.Ag",
+        "abrev": "CHARAbbrev.Ag",
+        "initial": 35,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 35,
+        "bonus": 3,
+        "cost": 25
+      },
+      "dex": {
+        "type": "Number",
+        "label": "CHAR.Dex",
+        "abrev": "CHARAbbrev.Dex",
+        "initial": null,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 0,
+        "bonus": 0,
+        "cost": 25
+      },
+      "int": {
+        "type": "Number",
+        "label": "CHAR.Int",
+        "abrev": "CHARAbbrev.Int",
+        "initial": 10,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 10,
+        "bonus": 1,
+        "cost": 25
+      },
+      "wp": {
+        "type": "Number",
+        "label": "CHAR.WP",
+        "abrev": "CHARAbbrev.WP",
+        "initial": 20,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 20,
+        "bonus": 2,
+        "cost": 25
+      },
+      "fel": {
+        "type": "Number",
+        "label": "CHAR.Fel",
+        "abrev": "CHARAbbrev.Fel",
+        "initial": null,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 0,
+        "bonus": 0,
+        "cost": 25
+      }
+    },
+    "status": {
+      "wounds": {
+        "type": "Number",
+        "label": "Wounds",
+        "abrev": "W",
+        "value": 11,
+        "max": 68
+      },
+      "advantage": {
+        "type": "Number",
+        "label": "Advantage",
+        "value": 0,
+        "max": 10
+      },
+      "criticalWounds": {
+        "type": "Number",
+        "label": "Critical Wounds",
+        "value": 0,
+        "max": 5
+      },
+      "sin": {
+        "type": "Number",
+        "label": "Sin",
+        "value": "0"
+      },
+      "penalties": {
+        "type": "String",
+        "label": "Penalties",
+        "value": ""
+      },
+      "corruption": {
+        "type": "Number",
+        "label": "Corruption",
+        "value": 0
+      },
+      "encumbrance": {
+        "type": "Number",
+        "label": "Encumbrance",
+        "max": 10,
+        "current": 0
+      },
+      "mount": {
+        "id": "",
+        "mounted": false,
+        "isToken": false,
+        "tokenData": {
+          "scene": "",
+          "token": ""
+        }
+      }
+    },
+    "details": {
+      "species": {
+        "type": "String",
+        "label": "Species",
+        "value": "Jabberslythe",
+        "subspecies": ""
+      },
+      "gender": {
+        "type": "String",
+        "label": "Gender",
+        "value": "???"
+      },
+      "biography": {
+        "type": "String",
+        "label": "Biography",
+        "value": ""
+      },
+      "gmnotes": {
+        "type": "String",
+        "label": "GM Notes",
+        "value": ""
+      },
+      "size": {
+        "type": "String",
+        "label": "Size",
+        "value": "enor"
+      },
+      "move": {
+        "type": "Number",
+        "label": "Movement",
+        "value": 7,
+        "walk": 14,
+        "run": 56
+      },
+      "god": {
+        "type": "String",
+        "label": "God",
+        "value": ""
+      },
+      "status": {
+        "type": "String",
+        "value": "",
+        "standing": "",
+        "tier": 0,
+        "modifier": 0
+      },
+      "hitLocationTable": {
+        "value": "hitloc",
+        "type": "String",
+        "label": "Hit Location Table"
+      }
+    },
+    "excludedTraits": []
+  },
+  "ownership": {
+    "default": 0,
+    "O2wGx3K2xdLRf1Hx": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "p6OsUjigSLS2Fduz": 3
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "???",
+    "displayName": 20,
+    "width": 3,
+    "height": 3,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": true,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "status.wounds"
+    },
+    "bar2": {
+      "attribute": "status.advantage"
+    },
+    "randomImg": false,
+    "alpha": 1,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "modules/wfrp4e-ua1/assets/tokens/popout/jabberslythe.webp",
+      "tint": null,
+      "scaleX": 2,
+      "scaleY": 2,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.1.6",
+    "coreVersion": "11.315",
+    "createdTime": 1663652878976,
+    "modifiedTime": 1717654957006,
+    "lastModifiedBy": "AEKammMuRMA2j4AH"
+  },
+  "_key": "!actors!cUhwMy0lhavwE9qb"
+}

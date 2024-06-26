@@ -1,0 +1,889 @@
+{
+  "_id": "9sil7WU58XBm1YyD",
+  "name": "Ungor Raider",
+  "type": "creature",
+  "img": "modules/wfrp4e-core/art/bestiary/ungor.webp",
+  "items": [
+    {
+      "name": "Arboreal",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "_id": "HipPSD61s7Vkcru0",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "equipTransfer": false,
+                "avoidTest": {
+                  "value": "none"
+                },
+                "prompt": false
+              },
+              "scriptData": [
+                {
+                  "label": "Climb or Stealth Tests",
+                  "trigger": "dialog",
+                  "script": "[Script.s8xU6OOZbbfo6VIw]",
+                  "options": {
+                    "dialog": {
+                      "activateScript": "[Script.Q9EmlWmuDac83cJw]",
+                      "hideScript": "[Script.EVBSHEC5nmmj2X41]",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "tint": null,
+          "transfer": true,
+          "origin": null,
+          "name": "Arboreal",
+          "description": "",
+          "statuses": [],
+          "_key": "!actors.items.effects!9sil7WU58XBm1YyD.rOV2s6PQBBrhpMOv.HipPSD61s7Vkcru0"
+        }
+      ],
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.9sil7WU58XBm1YyD.Item.rOV2s6PQBBrhpMOv"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>The creature is at home in the forests. In the woodlands, it adds its Agility Bonus to the SL of all Climb and Stealth Tests.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878980,
+        "modifiedTime": 1713591965822,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 6900000,
+      "_id": "rOV2s6PQBBrhpMOv",
+      "_key": "!actors.items!9sil7WU58XBm1YyD.rOV2s6PQBBrhpMOv"
+    },
+    {
+      "name": "Night Vision",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.9sil7WU58XBm1YyD.Item.FmHDbCOy3pH8yKhm"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>You can see very well in natural darkness. Assuming you have at least a faint source of light (such as starlight, moonlight, or bioluminescence) you can see clearly for 20 yards per level of Night Vision. Further, you can extend the effective illumination distance of any light sources by 20 yards per level of Night Vision.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": false,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878975,
+        "modifiedTime": 1713591965822,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 2700000,
+      "_id": "FmHDbCOy3pH8yKhm",
+      "_key": "!actors.items!9sil7WU58XBm1YyD.FmHDbCOy3pH8yKhm"
+    },
+    {
+      "name": "Gold Crown",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/goldcrown.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.9sil7WU58XBm1YyD.Item.Ggx0bRaCuq8MbF0g"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 240
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495181,
+        "modifiedTime": 1713591965822,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "Ggx0bRaCuq8MbF0g",
+      "_key": "!actors.items!9sil7WU58XBm1YyD.Ggx0bRaCuq8MbF0g"
+    },
+    {
+      "name": "Silver Shilling",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/silvershilling.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.9sil7WU58XBm1YyD.Item.KB8HgDz56dh2w7w1"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 12
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495184,
+        "modifiedTime": 1713591965822,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "KB8HgDz56dh2w7w1",
+      "_key": "!actors.items!9sil7WU58XBm1YyD.KB8HgDz56dh2w7w1"
+    },
+    {
+      "name": "Brass Penny",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/brasspenny.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.9sil7WU58XBm1YyD.Item.0MYOJFx3vkYA95B4"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 1
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495169,
+        "modifiedTime": 1713591965822,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "0MYOJFx3vkYA95B4",
+      "_key": "!actors.items!9sil7WU58XBm1YyD.0MYOJFx3vkYA95B4"
+    },
+    {
+      "name": "Weapon",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.9sil7WU58XBm1YyD.Item.Fd5KN58oKMtQRzjC"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>The creature carries a melee weapon, or uses teeth, claws, or similar in combat.\n                \n                The weapon causes Damage equal to its Rating which already includes the creature’s Strength Bonus. Typically it will be 4 + its Strength Bonus (representing a Hand Weapon)</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": true,
+          "damage": true,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "ws",
+          "bonusCharacteristic": "s",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "3",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878974,
+        "modifiedTime": 1713591965822,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "Fd5KN58oKMtQRzjC",
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 1800000,
+      "_key": "!actors.items!9sil7WU58XBm1YyD.Fd5KN58oKMtQRzjC"
+    },
+    {
+      "name": "Ranged (35)",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.9sil7WU58XBm1YyD.Item.opt3Gi7T3BGG2SWC"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>The creature has a ranged weapon. The weapon does Damage equal to the Rating and the range in yards is marked in brackets</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": true,
+          "damage": true,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "bs",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "ranged"
+        },
+        "specification": {
+          "value": "7",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878978,
+        "modifiedTime": 1713591965822,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "opt3Gi7T3BGG2SWC",
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 5400000,
+      "_key": "!actors.items!9sil7WU58XBm1YyD.opt3Gi7T3BGG2SWC"
+    }
+  ],
+  "effects": [],
+  "folder": "EDpgR00n9Xbb5a4k",
+  "sort": 100001,
+  "flags": {
+    "autoCalcRun": true,
+    "autoCalcWalk": true,
+    "autoCalcWounds": true,
+    "autoCalcCritW": true,
+    "autoCalcCorruption": true,
+    "autoCalcEnc": true,
+    "autoCalcSize": true,
+    "wfrp4e-ua1": {
+      "initialization-folder": "The Guilty Party",
+      "sort": 100001
+    },
+    "meleeDamageIncrease": 0,
+    "rangedDamageIncrease": 0,
+    "robust": 0,
+    "resolute": 0,
+    "ambi": 0,
+    "eqpPoints": 0,
+    "defensive": 0,
+    "talentTests": []
+  },
+  "system": {
+    "characteristics": {
+      "ws": {
+        "type": "number",
+        "label": "CHAR.WS",
+        "abrev": "CHARAbbrev.WS",
+        "initial": 35,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 35,
+        "bonus": 3,
+        "cost": 25
+      },
+      "bs": {
+        "type": "Number",
+        "label": "CHAR.BS",
+        "abrev": "CHARAbbrev.BS",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "s": {
+        "type": "Number",
+        "label": "CHAR.S",
+        "abrev": "CHARAbbrev.S",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "t": {
+        "type": "Number",
+        "label": "CHAR.T",
+        "abrev": "CHARAbbrev.T",
+        "initial": 35,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 35,
+        "bonus": 3,
+        "cost": 25
+      },
+      "i": {
+        "type": "Number",
+        "label": "CHAR.I",
+        "abrev": "CHARAbbrev.I",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "ag": {
+        "type": "Number",
+        "label": "CHAR.Ag",
+        "abrev": "CHARAbbrev.Ag",
+        "initial": 35,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 35,
+        "bonus": 3,
+        "cost": 25
+      },
+      "dex": {
+        "type": "Number",
+        "label": "CHAR.Dex",
+        "abrev": "CHARAbbrev.Dex",
+        "initial": 25,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 25,
+        "bonus": 2,
+        "cost": 25
+      },
+      "int": {
+        "type": "Number",
+        "label": "CHAR.Int",
+        "abrev": "CHARAbbrev.Int",
+        "initial": 25,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 25,
+        "bonus": 2,
+        "cost": 25
+      },
+      "wp": {
+        "type": "Number",
+        "label": "CHAR.WP",
+        "abrev": "CHARAbbrev.WP",
+        "initial": 25,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 25,
+        "bonus": 2,
+        "cost": 25
+      },
+      "fel": {
+        "type": "Number",
+        "label": "CHAR.Fel",
+        "abrev": "CHARAbbrev.Fel",
+        "initial": 25,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 25,
+        "bonus": 2,
+        "cost": 25
+      }
+    },
+    "status": {
+      "wounds": {
+        "type": "Number",
+        "label": "Wounds",
+        "abrev": "W",
+        "value": 11,
+        "max": 11
+      },
+      "advantage": {
+        "type": "Number",
+        "label": "Advantage",
+        "value": 0,
+        "max": 10
+      },
+      "criticalWounds": {
+        "type": "Number",
+        "label": "Critical Wounds",
+        "value": 0,
+        "max": 3
+      },
+      "sin": {
+        "type": "Number",
+        "label": "Sin",
+        "value": "0"
+      },
+      "penalties": {
+        "type": "String",
+        "label": "Penalties",
+        "value": ""
+      },
+      "corruption": {
+        "type": "Number",
+        "label": "Corruption",
+        "value": 0
+      },
+      "encumbrance": {
+        "type": "Number",
+        "label": "Encumbrance",
+        "max": 6,
+        "current": 0
+      },
+      "mount": {
+        "id": "",
+        "mounted": false,
+        "isToken": false,
+        "tokenData": {
+          "scene": "",
+          "token": ""
+        }
+      }
+    },
+    "details": {
+      "species": {
+        "type": "String",
+        "label": "Species",
+        "value": "Beastmen",
+        "subspecies": ""
+      },
+      "gender": {
+        "type": "String",
+        "label": "Gender",
+        "value": "Varies"
+      },
+      "biography": {
+        "type": "String",
+        "label": "Biography",
+        "value": "<section id=\"secret-ZzEdrGUCizft5fKb\" class=\"secret\"><p>The three Ungors are rather a rangy and mangy specimens. They resemble fauns: from the waist down they appear like goats, with cloven hooves and shaggy brown fur. Their chests are naked, and each of their staring ribs can be counted. Their heads bear short, sharp horns, and straggly growths of hair sprout from their chins. Their mouths drool, crammed with the sharp teeth of carnivores, but there&rsquo;s a glimmer of intelligence to their caprine predatory eyes.</p></section>"
+      },
+      "gmnotes": {
+        "type": "String",
+        "label": "GM Notes",
+        "value": ""
+      },
+      "size": {
+        "type": "String",
+        "label": "Size",
+        "value": "avg"
+      },
+      "move": {
+        "type": "Number",
+        "label": "Movement",
+        "value": 4,
+        "walk": 8,
+        "run": 16
+      },
+      "god": {
+        "type": "String",
+        "label": "God",
+        "value": ""
+      },
+      "status": {
+        "type": "String",
+        "value": "",
+        "standing": "",
+        "tier": 0,
+        "modifier": 0
+      },
+      "hitLocationTable": {
+        "value": "hitloc",
+        "type": "String",
+        "label": "Hit Location Table"
+      }
+    },
+    "excludedTraits": []
+  },
+  "ownership": {
+    "default": 0,
+    "O2wGx3K2xdLRf1Hx": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "p6OsUjigSLS2Fduz": 3
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Ungor Raider",
+    "displayName": 20,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "status.wounds"
+    },
+    "bar2": {
+      "attribute": "status.advantage"
+    },
+    "randomImg": false,
+    "alpha": 1,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "modules/wfrp4e-core/tokens/ungor.webp",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1676513766495,
+    "modifiedTime": 1713897475501,
+    "lastModifiedBy": "UC3GBICXFNclXoFJ"
+  },
+  "_key": "!actors!9sil7WU58XBm1YyD"
+}

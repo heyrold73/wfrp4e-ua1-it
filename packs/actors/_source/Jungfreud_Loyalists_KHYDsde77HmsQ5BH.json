@@ -1,0 +1,1240 @@
+{
+  "_id": "KHYDsde77HmsQ5BH",
+  "name": "Lealisti dei Jungfreud",
+  "type": "creature",
+  "img": "modules/wfrp4e-ua1/assets/actors/jungfreud-loyalist.webp",
+  "items": [
+    {
+      "name": "Mischia (Base)",
+      "type": "skill",
+      "img": "modules/wfrp4e-core/icons/skills/basic-skill-ws.png",
+      "effects": [],
+      "folder": "dc53RquVINsYS6cm",
+      "sort": 0,
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.rOPmyLWa37e7s9v6"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Mischia}"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "advanced": {
+          "value": "bsc",
+          "type": "String"
+        },
+        "grouped": {
+          "value": "isSpec",
+          "type": "String"
+        },
+        "characteristic": {
+          "type": "String",
+          "label": "Characteristic",
+          "value": "ws"
+        },
+        "advances": {
+          "type": "Number",
+          "label": "Advances",
+          "value": 5,
+          "costModifier": 0,
+          "force": false
+        },
+        "modifier": {
+          "type": "Number",
+          "label": "Advances",
+          "value": 0
+        },
+        "total": {
+          "type": "Number",
+          "label": "Total",
+          "value": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "sAiwDCZFd21tgaDN": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1691216016344,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "rOPmyLWa37e7s9v6",
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.rOPmyLWa37e7s9v6"
+    },
+    {
+      "name": "Percepire",
+      "type": "skill",
+      "img": "modules/wfrp4e-core/icons/skills/basic-skill-i.png",
+      "effects": [],
+      "folder": "dc53RquVINsYS6cm",
+      "sort": 0,
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.Fs06sr7y9JKpVQmB"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6Jhks0zDRpJeN6dW]{Percepire}"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "advanced": {
+          "value": "bsc",
+          "type": "String"
+        },
+        "grouped": {
+          "value": "noSpec",
+          "type": "String"
+        },
+        "characteristic": {
+          "type": "String",
+          "label": "Characteristic",
+          "value": "i"
+        },
+        "advances": {
+          "type": "Number",
+          "label": "Advances",
+          "value": 10,
+          "costModifier": 0,
+          "force": false
+        },
+        "modifier": {
+          "type": "Number",
+          "label": "Advances",
+          "value": 0
+        },
+        "total": {
+          "type": "Number",
+          "label": "Total",
+          "value": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "sAiwDCZFd21tgaDN": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1691216016344,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "Fs06sr7y9JKpVQmB",
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.Fs06sr7y9JKpVQmB"
+    },
+    {
+      "name": "Addestrato",
+      "type": "talent",
+      "img": "modules/wfrp4e-core/icons/talents/drilled.png",
+      "effects": [
+        {
+          "name": "Addestrato",
+          "icon": "modules/wfrp4e-core/icons/talents/drilled.png",
+          "flags": {
+            "wfrp4e": {
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "equipTransfer": false,
+                "prompt": false
+              },
+              "scriptData": [
+                {
+                  "label": "@item.system.tests.value",
+                  "trigger": "dialog",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "[Script.SPOkFWZWziZk5b7A]",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  }
+                }
+              ]
+            },
+            "core": {
+              "sourceId": "Compendium.wfrp4e-core.items.Item.J9MK0AIaTbvd5oF6.ActiveEffect.FdTH1qADIVHbmuMn"
+            }
+          },
+          "_id": "zkJFANrVuv4kJLqc",
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "origin": null,
+          "transfer": true,
+          "statuses": [],
+          "tint": null,
+          "_key": "!actors.items.effects!KHYDsde77HmsQ5BH.J9MK0AIaTbvd5oF6.zkJFANrVuv4kJLqc"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.J9MK0AIaTbvd5oF6"
+        },
+        "wfrp4e-up-in-arms": {
+          "initialization-folder": "Talents",
+          "sort": -103125
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Il Personaggio si è allenato a combattere in formazione. Se un nemico gli causa una perdita di Vantaggio, ma il Personaggio è accanto a un alleato Addestrato, potrà conservare 1 Vantaggio per grado di questo Talento.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "max": {
+          "type": "String",
+          "label": "Max Advances",
+          "value": "ws"
+        },
+        "advances": {
+          "type": "Number",
+          "label": "Advances",
+          "value": 1,
+          "force": false
+        },
+        "career": {
+          "value": "",
+          "type": "String",
+          "label": "Career"
+        },
+        "tests": {
+          "type": "String",
+          "label": "Tests",
+          "value": "Mischia quando ci si batte accanto a un alleato Addestrato"
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652876514,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "7rBeqEQWvYkLtN6J",
+      "sort": -103125,
+      "ownership": {
+        "default": 0,
+        "FIIsUxJ6xGvEDRPV": 3,
+        "ckwYhYwxMqtLWtY0": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "_id": "J9MK0AIaTbvd5oF6",
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.J9MK0AIaTbvd5oF6"
+    },
+    {
+      "name": "Animosità",
+      "type": "trait",
+      "img": "modules/wfrp4e-core/icons/traits/trait.png",
+      "effects": [
+        {
+          "name": "Animosità",
+          "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+          "_id": "mqb7U1RR6DjIhLgy",
+          "changes": [],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "seconds": null,
+            "combat": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "origin": null,
+          "transfer": true,
+          "statuses": [],
+          "flags": {
+            "wfrp4e": {
+              "scriptData": [
+                {
+                  "label": "Socially or physically attacking @item.system.specification.value",
+                  "trigger": "dialog",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "[Script.iVhi3Z6zPaf1bf8g]",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  },
+                  "script": "[Script.wAETU6aTRr9d4oCU]"
+                },
+                {
+                  "label": "Interacting with @item.system.specification.value",
+                  "string": "",
+                  "trigger": "dialog",
+                  "options": {
+                    "dialog": {
+                      "hideScript": "[Script.6Fe8M5MdklKS2olx]",
+                      "activateScript": "",
+                      "submissionScript": "",
+                      "targeter": false
+                    },
+                    "immediate": {
+                      "deleteEffect": false
+                    }
+                  },
+                  "script": "[Script.0iTLDgFHO9Rgc010]"
+                }
+              ],
+              "applicationData": {
+                "type": "document",
+                "documentType": "Actor",
+                "avoidTest": {
+                  "value": "none"
+                },
+                "equipTransfer": false,
+                "prompt": false,
+                "testIndependent": false
+              }
+            },
+            "core": {
+              "sourceId": "Compendium.wfrp4e-core.items.Item.Q2MCUrG2HppMcvN0.ActiveEffect.IjfyYiIzcg133HAV"
+            }
+          },
+          "tint": null,
+          "_key": "!actors.items.effects!KHYDsde77HmsQ5BH.0VpT5yubw4UL7j6f.mqb7U1RR6DjIhLgy"
+        }
+      ],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.0VpT5yubw4UL7j6f"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>Alla creatura non piace il Bersaglio. Vedere Animosità (pag. 190). </p>\n <p>Il Personaggio nutre ostilità verso il Bersaglio, di solito un gruppo, come ‘Nordlander’, ‘Uominibestia’ o ‘Nobili’. Quando lo incontra deve effettuare una Prova di Psicologia. Se ha successo riesce a controllarsi e subisce solo -20 alle Prove di Socialità rispetto al gruppo. In caso di fallimento è vittima dell’ <em>Animosità</em>.</p>\n<p>&nbsp;</p>\n<p>Alla fine di ogni Round successivo potrà tentare un’ulteriore Prova per controllarsi. Anche se non riesce gli effetti svaniscono naturalmente appena tutti i Bersagli visibili sono pacificati o se ne vanno, oppure se il Personaggio diviene <em>Stordito, Privo di Sensi</em> o soggetto a un altro Tratto Psicologico. </p>\n<p>&nbsp;</p>\n<p>Mentre è vittima di <em>Animosità</em>, il Personaggio deve attaccare il <em>Bersaglio</em> verbalmente (insulti e freddure) o fisicamente (di solito a pugni), come appropriato. Inoltre, ottiene +1 LS a queste aggressioni. <em>Paura</em> e <em>Terrore</em> prevalgono su <em>Animosità</em>.</p>"
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "rollable": {
+          "value": true,
+          "damage": false,
+          "skill": "",
+          "label": "Rollable",
+          "type": "Boolean",
+          "rollCharacteristic": "wp",
+          "bonusCharacteristic": "",
+          "dice": "",
+          "defaultDifficulty": "challenging",
+          "SL": true,
+          "attackType": "melee"
+        },
+        "specification": {
+          "value": "Gente di Altdorf",
+          "type": "String",
+          "label": "Specification"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "disabled": false
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663652878972,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "LjyFyBwUbRxLvkuI",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 100000,
+      "_id": "0VpT5yubw4UL7j6f",
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.0VpT5yubw4UL7j6f"
+    },
+    {
+      "name": "Corona d'Oro",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/goldcrown.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.Ggx0bRaCuq8MbF0g"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 240
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495181,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "Ggx0bRaCuq8MbF0g",
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.Ggx0bRaCuq8MbF0g"
+    },
+    {
+      "name": "Scellino d'Argento",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/silvershilling.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.KB8HgDz56dh2w7w1"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 12
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495184,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "KB8HgDz56dh2w7w1",
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.KB8HgDz56dh2w7w1"
+    },
+    {
+      "name": "Penny d'Ottone",
+      "type": "money",
+      "img": "modules/wfrp4e-core/icons/currency/brasspenny.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "description",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.0MYOJFx3vkYA95B4"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0.005
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "coinValue": {
+          "label": "Value (in d)",
+          "type": "Number",
+          "value": 1
+        },
+        "price": {
+          "gc": null,
+          "ss": null,
+          "bp": null
+        },
+        "availability": {},
+        "damageToItem": {
+          "value": null,
+          "shield": null
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495169,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "folder": "fFWGmypKsp4nFc6H",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_id": "0MYOJFx3vkYA95B4",
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.0MYOJFx3vkYA95B4"
+    },
+    {
+      "name": "Giaco di Cuoio",
+      "type": "armour",
+      "img": "modules/wfrp4e-core/icons/equipment/armour/leather-jack.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.QenXeqnJb0YHVG3g"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 1
+        },
+        "price": {
+          "type": "String",
+          "label": "Price",
+          "gc": 0,
+          "ss": 12,
+          "bp": 0
+        },
+        "availability": {
+          "type": "String",
+          "label": "Availability",
+          "value": "common"
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "damageToItem": {
+          "type": "Number",
+          "value": 0,
+          "shield": 0
+        },
+        "worn": {
+          "type": "Boolean",
+          "label": "Worn",
+          "value": true
+        },
+        "armorType": {
+          "type": "String",
+          "label": "Armour Type",
+          "value": "softLeather"
+        },
+        "penalty": {
+          "type": "String",
+          "label": "Penalty",
+          "value": ""
+        },
+        "qualities": {
+          "type": "String",
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "type": "String",
+          "label": "Flaws",
+          "value": []
+        },
+        "special": {
+          "type": "String",
+          "label": "Special",
+          "value": ""
+        },
+        "AP": {
+          "head": 0,
+          "lArm": 1,
+          "rArm": 1,
+          "lLeg": 0,
+          "rLeg": 0,
+          "body": 1
+        },
+        "APdamage": {
+          "head": 0,
+          "lArm": 0,
+          "rArm": 0,
+          "lLeg": 0,
+          "rLeg": 0,
+          "body": 0
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495284,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "QenXeqnJb0YHVG3g",
+      "folder": "urDb04aC38SChVU2",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 200000,
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.QenXeqnJb0YHVG3g"
+    },
+    {
+      "name": "Lancia",
+      "type": "weapon",
+      "img": "modules/wfrp4e-core/icons/equipment/weapons/hand-weapon.png",
+      "effects": [],
+      "flags": {
+        "_sheetTab": "details",
+        "core": {
+          "sourceId": "Compendium.wfrp4e-ua1.actors.Actor.KHYDsde77HmsQ5BH.Item.wZCJ6gDoJ7N2JSUm"
+        }
+      },
+      "system": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 1
+        },
+        "price": {
+          "type": "String",
+          "label": "Price",
+          "gc": 1,
+          "ss": 0,
+          "bp": 0
+        },
+        "availability": {
+          "type": "String",
+          "label": "Availability",
+          "value": "common"
+        },
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": ""
+        },
+        "damageToItem": {
+          "type": "Number",
+          "value": 0,
+          "shield": 0
+        },
+        "damage": {
+          "type": "String",
+          "label": "Damage",
+          "dice": "",
+          "value": "SB+4"
+        },
+        "reach": {
+          "type": "String",
+          "label": "Reach",
+          "value": "average"
+        },
+        "range": {
+          "type": "String",
+          "label": "Range",
+          "value": ""
+        },
+        "skill": {
+          "type": "String",
+          "label": "Skill Override",
+          "value": ""
+        },
+        "modeOverride": {
+          "type": "String",
+          "label": "Mode Override",
+          "value": ""
+        },
+        "twohanded": {
+          "type": "Boolean",
+          "label": "Two-Handed",
+          "value": false
+        },
+        "ammunitionGroup": {
+          "type": "String",
+          "label": "Ammunition Group",
+          "value": "none"
+        },
+        "currentAmmo": {
+          "value": "0"
+        },
+        "consumesAmmo": {
+          "value": true
+        },
+        "weaponGroup": {
+          "type": "String",
+          "label": "Weapon Group",
+          "value": "basic"
+        },
+        "qualities": {
+          "label": "Qualities",
+          "value": []
+        },
+        "flaws": {
+          "label": "Flaws",
+          "value": []
+        },
+        "special": {
+          "type": "String",
+          "label": "Special",
+          "value": ""
+        },
+        "equipped": true,
+        "loaded": {
+          "value": false,
+          "repeater": false,
+          "amt": 0
+        },
+        "offhand": {
+          "value": false
+        }
+      },
+      "_stats": {
+        "systemId": "wfrp4e",
+        "systemVersion": "7.0.3",
+        "coreVersion": "11.315",
+        "createdTime": 1663627495171,
+        "modifiedTime": 1713591966753,
+        "lastModifiedBy": "UC3GBICXFNclXoFJ"
+      },
+      "_id": "wZCJ6gDoJ7N2JSUm",
+      "folder": "pG7lWm5hsAoxzrto",
+      "ownership": {
+        "default": 0,
+        "WSH1M9OwikGRQD2R": 3,
+        "UC3GBICXFNclXoFJ": 3
+      },
+      "sort": 0,
+      "_key": "!actors.items!KHYDsde77HmsQ5BH.wZCJ6gDoJ7N2JSUm"
+    }
+  ],
+  "effects": [],
+  "folder": "VDq9JEN9bSpatpYg",
+  "sort": 500000,
+  "flags": {
+    "autoCalcRun": true,
+    "autoCalcWalk": true,
+    "autoCalcWounds": true,
+    "autoCalcCritW": true,
+    "autoCalcCorruption": true,
+    "autoCalcEnc": true,
+    "autoCalcSize": true,
+    "wfrp4e-ua1": {
+      "initialization-folder": "Heart of Glass",
+      "sort": 500000
+    },
+    "meleeDamageIncrease": 0,
+    "rangedDamageIncrease": 0,
+    "robust": 0,
+    "resolute": 0,
+    "ambi": 0,
+    "eqpPoints": 1,
+    "defensive": 0,
+    "talentTests": [
+      {
+        "talentName": "Addestrato",
+        "test": "Mischia quando ci si batte accanto a un alleato Addestrato",
+        "SL": 1
+      }
+    ]
+  },
+  "system": {
+    "characteristics": {
+      "ws": {
+        "type": "number",
+        "label": "CHAR.WS",
+        "abrev": "CHARAbbrev.WS",
+        "initial": 35,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 35,
+        "bonus": 3,
+        "cost": 25
+      },
+      "bs": {
+        "type": "Number",
+        "label": "CHAR.BS",
+        "abrev": "CHARAbbrev.BS",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "s": {
+        "type": "Number",
+        "label": "CHAR.S",
+        "abrev": "CHARAbbrev.S",
+        "initial": 35,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 35,
+        "bonus": 3,
+        "cost": 25
+      },
+      "t": {
+        "type": "Number",
+        "label": "CHAR.T",
+        "abrev": "CHARAbbrev.T",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "i": {
+        "type": "Number",
+        "label": "CHAR.I",
+        "abrev": "CHARAbbrev.I",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "ag": {
+        "type": "Number",
+        "label": "CHAR.Ag",
+        "abrev": "CHARAbbrev.Ag",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "dex": {
+        "type": "Number",
+        "label": "CHAR.Dex",
+        "abrev": "CHARAbbrev.Dex",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "int": {
+        "type": "Number",
+        "label": "CHAR.Int",
+        "abrev": "CHARAbbrev.Int",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "wp": {
+        "type": "Number",
+        "label": "CHAR.WP",
+        "abrev": "CHARAbbrev.WP",
+        "initial": 30,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 30,
+        "bonus": 3,
+        "cost": 25
+      },
+      "fel": {
+        "type": "Number",
+        "label": "CHAR.Fel",
+        "abrev": "CHARAbbrev.Fel",
+        "initial": 35,
+        "modifier": 0,
+        "advances": 0,
+        "bonusMod": 0,
+        "calculationBonusModifier": 0,
+        "value": 35,
+        "bonus": 3,
+        "cost": 25
+      }
+    },
+    "status": {
+      "wounds": {
+        "type": "Number",
+        "label": "Wounds",
+        "abrev": "W",
+        "value": 12,
+        "max": 12
+      },
+      "advantage": {
+        "type": "Number",
+        "label": "Advantage",
+        "value": 0,
+        "max": 10
+      },
+      "criticalWounds": {
+        "type": "Number",
+        "label": "Critical Wounds",
+        "value": 0,
+        "max": 3
+      },
+      "sin": {
+        "type": "Number",
+        "label": "Sin",
+        "value": "0"
+      },
+      "penalties": {
+        "type": "String",
+        "label": "Penalties",
+        "value": ""
+      },
+      "corruption": {
+        "type": "Number",
+        "label": "Corruption",
+        "value": 0
+      },
+      "encumbrance": {
+        "type": "Number",
+        "label": "Encumbrance",
+        "max": 6,
+        "current": 0
+      },
+      "mount": {
+        "id": "",
+        "mounted": false,
+        "isToken": false,
+        "tokenData": {
+          "scene": "",
+          "token": ""
+        }
+      }
+    },
+    "details": {
+      "species": {
+        "type": "String",
+        "label": "Species",
+        "value": "Umano",
+        "subspecies": ""
+      },
+      "gender": {
+        "type": "String",
+        "label": "Gender",
+        "value": "Varie"
+      },
+      "biography": {
+        "type": "String",
+        "label": "Biography",
+        "value": "<section id=\"secret-tZlmODNsZnH0EU4d\" class=\"secret\"><p>Quando l’Esercito Imperiale di Altdorf arrivò a Ubersreik, passò a fil di spada tutta la milizia riluttante ad arrendersi, tranne i pochi fortunati di stanza nella @UUID[Compendium.wfrp4e-starter-set-it.journals.TSyoR9nSk7cehypG.JournalEntryPage.tCh9vROs0eeTuEwA]{Torre Magnus}. Quei “lealisti” rimasti nella torre, poco più di borghesi arruolati nella milizia, sono ancora lì e vivono in una situazione di inquieto stallo. Le truppe di Altdorf non possono assaltare la Torre, date le sue incredibili difese, ma anche i Lealisti non possono andarsene. Il tutto si è trasformato in un incubo politico per entrambe le parti, poiché le simpatie locali sono molto a favore di quelli bloccati all’interno della torre.</p></section>"
+      },
+      "gmnotes": {
+        "type": "String",
+        "label": "GM Notes",
+        "value": ""
+      },
+      "size": {
+        "type": "String",
+        "label": "Size",
+        "value": "avg"
+      },
+      "move": {
+        "type": "Number",
+        "label": "Movement",
+        "value": 4,
+        "walk": 8,
+        "run": 16
+      },
+      "god": {
+        "type": "String",
+        "label": "God",
+        "value": ""
+      },
+      "status": {
+        "type": "String",
+        "value": "Silver 1",
+        "standing": "",
+        "tier": 0,
+        "modifier": 0
+      },
+      "hitLocationTable": {
+        "value": "hitloc",
+        "type": "String",
+        "label": "Hit Location Table"
+      }
+    },
+    "excludedTraits": []
+  },
+  "ownership": {
+    "default": 0,
+    "O2wGx3K2xdLRf1Hx": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "p6OsUjigSLS2Fduz": 3
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Jungfreud Loyalists",
+    "displayName": 20,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "status.wounds"
+    },
+    "bar2": {
+      "attribute": "status.advantage"
+    },
+    "randomImg": false,
+    "alpha": 1,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "modules/wfrp4e-ua1/assets/tokens/jungfreud-loyalist.webp",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1676513766542,
+    "modifiedTime": 1713897475740,
+    "lastModifiedBy": "UC3GBICXFNclXoFJ"
+  },
+  "_key": "!actors!KHYDsde77HmsQ5BH"
+}

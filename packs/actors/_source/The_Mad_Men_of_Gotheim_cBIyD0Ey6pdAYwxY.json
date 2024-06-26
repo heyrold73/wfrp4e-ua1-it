@@ -1,0 +1,18 @@
+{
+  "name": "La Follia di Gotheim",
+  "type": "Actor",
+  "_id": "cBIyD0Ey6pdAYwxY",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1691347810399,
+    "modifiedTime": 1691347810399,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!folders!cBIyD0Ey6pdAYwxY"
+}
