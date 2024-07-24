@@ -2,7 +2,7 @@
   "id": "wfrp4e-ua1-it",
   "title": "WFRP4e - Avventure a Ubersreik I",
   "description": "Ubersreik Adventures offers six scenarios for Warhammer Fantasy Roleplay set in the Duchy of Ubersreik, the setting established in the Warhammer Fantasy Starter Set. These can be used as single stand along adventures, slotted into an existing campaign, or combined to form a campaign exploring the Duchy of Ubersreik.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     {
       "name": "Heyrold",
@@ -57,7 +57,7 @@
   ],
   "packFolders": [
     {
-      "name": "Ubersreik Adventures I",
+      "name": "Avventure a Ubersreik I",
       "sorting": "m",
       "color": "#00435c",
       "packs": ["actors", "items", "journals", "scenes"]
@@ -70,7 +70,7 @@
       "wfrp4e-ua1.scenes"
     ],
     "folder": {
-      "name": "Ubersreik Adventures I",
+      "name": "Avventure a Ubersreik I",
       "sorting": "m",
       "color": "#00435c"
     }
