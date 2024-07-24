@@ -1,0 +1,8 @@
+2024/07/24-22:21:12.929 3afc Recovering log #88
+2024/07/24-22:21:12.953 3afc Delete type=0 #88
+2024/07/24-22:21:12.953 3afc Delete type=3 #86
+2024/07/24-22:25:37.040 2d50 Level-0 table #93: started
+2024/07/24-22:25:37.040 2d50 Level-0 table #93: 0 bytes OK
+2024/07/24-22:25:37.040 2d50 Delete type=0 #91
+2024/07/24-22:25:37.056 2d50 Manual compaction at level-0 from '!folders!EJ6nOxJpcXQZBSqu' @ 72057594037927935 : 1 .. '!items.effects!hqHJHkvkYmSIg2xK.bYvPqVB3JkdKtHys' @ 0 : 0; will stop at (end)
+2024/07/24-22:25:37.056 2d50 Manual compaction at level-1 from '!folders!EJ6nOxJpcXQZBSqu' @ 72057594037927935 : 1 .. '!items.effects!hqHJHkvkYmSIg2xK.bYvPqVB3JkdKtHys' @ 0 : 0; will stop at (end)
